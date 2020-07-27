@@ -1,3 +1,6 @@
+/*************************************************************** TIC TAC TOE **********************************************************************/
+/*************VAriables Declaration and Div Selection ****************/
+
 const Player1 = "X";
 const Player2 = 'O';
 let turn = 'X';
@@ -12,7 +15,7 @@ for (let i = 0; i < cells.length; i++) {
 
 function checkForWinner() {
     let win = false;
-    /* Horizontal Checks  */
+    /********************** Horizontal Checks  ***********************/
     if (cells[0].textContent === turn && cells[1].textContent === turn && cells[2].textContent === turn) {
         win = true;
     } else if (cells[3].textContent === turn && cells[4].textContent === turn && cells[5].textContent === turn) {
@@ -20,7 +23,7 @@ function checkForWinner() {
     } else if (cells[6].textContent === turn && cells[7].textContent === turn && cells[8].textContent === turn) {
         win = true;
     }
-    /* Vertical Checks */
+    /********************** Vertical Checks *************************/
     else if (cells[0].textContent === turn && cells[3].textContent === turn && cells[6].textContent === turn) {
         win = true;
     } else if (cells[1].textContent === turn && cells[4].textContent === turn && cells[7].textContent === turn) {
@@ -36,15 +39,15 @@ function checkForWinner() {
     }
     if (win === true) {
         alert(turn + ' wins');
-        setTimeout("location.reload(true);", 10000);
+        setTimeout("location.reload(true);", 10000);  // This will reload the page in given time if any of the player wins the game.
     }
 }
 
-/********************* Function to check for Draw******************/
+/********************* Function to check for Draw ******************/
 function checkDraw() {
     if (clicks == 9) {
         alert(' Draw! ');
-        setTimeout("location.reload(true);", 10000);
+        setTimeout("location.reload(true);", 10000); // This will reload the page in given time if the game draws.
     }
 }
 
@@ -67,10 +70,3 @@ function cellClicked() {
 
 }
 
-
-
-/* HINTS:
-cells[0].textContent
-Use if else statements
-=== use this operator
-*/
