@@ -1,0 +1,59 @@
+body {
+    background: #f3f3f3 url('img_tree.png');
+}
+
+#board {
+    padding: 1em;
+    text-align: center;
+}
+
+.heading {
+    padding-bottom: 1em;
+    /*font-size: 20px;*/
+    font-family: monospace;
+}
+
+.row {
+    clear: both;
+    margin: 0 auto;
+    width: 302px;
+}
+
+
+/* selects all 9 Cells */
+
+.row>div {
+    float: left;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 72px;
+}
+
+.row>div:hover {
+    background-color: lightgrey;
+}
+
+.top {
+    border-bottom: 1px black solid;
+}
+
+.middle {
+    border-bottom: 1px rgb(0, 0, 0) solid;
+}
+
+
+/* .bottom {
+    float: left;
+    height: 100px;
+    width: 100px;
+} */
+
+.left {
+    border-right: 1px black solid;
+}
+
+.right {
+    border-left: 1px black solid;
+}
