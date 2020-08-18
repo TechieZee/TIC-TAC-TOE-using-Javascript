@@ -57,3 +57,8 @@ body {
 .right {
     border-left: 1px black solid;
 }
+
+.foot {
+    height: 50px;
+    margin-top: -50px;
+}
