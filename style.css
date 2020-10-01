@@ -43,13 +43,6 @@ body {
     border-bottom: 1px rgb(0, 0, 0) solid;
 }
 
-
-/* .bottom {
-    float: left;
-    height: 100px;
-    width: 100px;
-} */
-
 .left {
     border-right: 1px black solid;
 }
