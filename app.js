@@ -45,7 +45,7 @@ function checkForWinner() {
 
 /********************* Function to check for Draw ******************/
 function checkDraw() {
-    if (clicks == 9) {
+    if (clicks >= 9) {
         alert(' Draw! ');
         setTimeout("location.reload(true);", 10000); // This will reload the page in given time if the game draws.
     }
@@ -57,13 +57,15 @@ function cellClicked() {
     if (event.target.textContent != 'X' && event.target.textContent != 'O') {
         event.target.textContent = turn;
         clicks++;
-        checkDraw();
+        checkForWinner();
         if (turn === 'X') {
-            checkForWinner();
             turn = 'O';
         } else {
-            checkForWinner();
+            
             turn = 'X';
+        }
+        else{
+            checkDraw();
         }
     } else {
         alert('Invalid Move!');
