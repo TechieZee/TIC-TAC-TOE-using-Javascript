@@ -53,9 +53,10 @@ function checkDraw() {
 
 /********************** Function for checking the clicked cell, swapping chances and calling other functions **********************/
 function cellClicked() {
-    clicks++;
+    
     if (event.target.textContent != 'X' && event.target.textContent != 'O') {
         event.target.textContent = turn;
+        clicks++;
         checkDraw();
         if (turn === 'X') {
             checkForWinner();
